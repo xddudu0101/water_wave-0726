@@ -1,0 +1,79 @@
+
+.box{
+            width: 280px;
+            height: 280px;
+            border-radius: 100%;
+            background-color: #020438;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,50%);
+            -webkit-transform: translate(-50%,-50%);
+            overflow: hidden;
+        }
+        .percent{
+            display: flex;
+            display: -webkit-flex;
+            color: #fff;
+            align-items: center;
+            -webkit-align-items: center;
+            justify-content: center;
+            -webkit-justify-content: center;
+            font-size: 64px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 99;
+        }
+
+        .box .water{
+            position: absolute;
+            left: 0;
+            top: 0px;
+            width: 100%;
+            height: 100%;
+            background-color: #4d67e3;
+            z-index: 2;
+            -webkit-transform: translate(0,100%);
+            transform: translate(0,100%);
+        }
+        .water_wave{
+            width: 200%;
+            position: absolute;
+            bottom: 100%;
+        }
+        .water_wave_back{
+            right: 0px;
+            fill: #4deeff;
+            animation: wave-back 1.4s infinite linear;
+            -webkit-animation: wave-back 1.4s infinite linear;
+        }
+        .water_wave_com{
+            left: 0px;
+            fill: #4D6DE3;
+            animation: wave-come 1.4s infinite linear;
+            -webkit-animation: wave-come 1.4s infinite linear;
+        }
+        @-webkit-keyframes wave-back{
+            to{
+                transform: translate(50%,0);
+            }
+        }
+        @keyframes wave-back{
+            to{
+                transform: translate(50%,0);
+            }
+        }
+        @-webkit-keyframes wave-come{
+            to{
+                transform: translate(-50%,0);
+            }
+        }
+        @keyframes wave-come{
+            to{
+                transform: translate(-50%,0);
+            }
+        }
+
